@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with JavaScript</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous">
+    <style>
+        body, .jumbotron{ padding: 30px; }
+        .text-giant{ font-size: 40px; text-align: right;}
+        .btn-crazy{
+            position: absolute;
+            top: 30px;
+            left: 35%;
+            width: 30%;
+            transition: 0.1s ease all;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="/Everything/\/index.html"><p>Back to main page.</p></a>
+    <button type="button" class="btn-crazy btn btn-lg btn-danger">
+        Click Me!
+    </button>
+    <button type="button" class="btn-crazy btn btn-lg btn-primary">
+        Click Me!
+    </button>
+    <button type="button" class="btn-crazy btn btn-lg btn-success">
+        Click Me!
+    </button>
+
+
+    <!-- Start Javascript -->
+    <script>
+        //Grab Everything
+        const buttons = document.querySelectorAll('.btn-crazy');
+        //Create the function
+        function goCrazy(){
+            //Get random num for the left offset
+            //Get random num for the left offset
+            const offsetLeft = Math.random() * 
+            (window.innerWidth - this.clientWidth);
+            const offsetTop  = Math.random() * 
+            (window.innerHeight - this.clientHeight);
+            //Apply offsets
+            this.style.top = offsetTop + 'px';
+            this.style.left = offsetLeft + 'px';
+
+            console.log(offsetLeft, offsetTop);
+        }
+        //Add event listenr
+        buttons.forEach(button => button.addEventListener('mouseenter', goCrazy));
+
+    </script>
+</body>
+</html>

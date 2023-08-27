@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Layout</title>
+
+    <style>
+        body {
+            margin: 0px;
+            background-color: #000000;
+        }
+        h2 {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        p {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        /* Greater than 768px */
+        .column {
+            float: left;
+        }
+        .sidebar{
+            width: 25%;
+        }
+        .main-content {
+            width: 50%;
+        }
+        .container {
+            text-align: center;
+            display: flex;
+        }
+        .container-cards {
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container-cards img {
+            width: 100%;
+        }
+        
+        .card {
+            max-width: 33%;
+            margin-bottom: 12px;
+            border: 1px solid hsl(43, 76%, 35%);
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px #ffffffbf;
+            padding: 20px;
+            background-color: #a4700f95;
+        }
+        /* Less than 768px */
+        @media screen and (max-width: 768px) {
+            .column, 
+            .sidebar,  
+            .main-content {
+                float:none;
+                width:100%;
+            }
+
+            .sidebar {
+                display:none;
+            }
+
+            .card {
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column sidebar">
+            <h2></h2>
+            <p></p>
+        </div>
+        <div class="column main-content">
+            <h2>Introduction to Getting Started with JavaScript</h2>
+            <p>Codefi homework for 08/28/2023</p>
+            <p>By Chris Kincaid</p>
+        </div>
+        <div class="column sidebar">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container-cards">
+        <div class="card">
+            <a href="pieCalc.html">
+            <img src="priceCalc.PNG" alt="">
+            <h2>Pie Price Calculator</h2></a>
+            <p>Never be unsure of how much your pie cost again.</p>
+            <p>Unless you're buying more than 10 or need to figure taxes.</p>
+        </div>
+        <div class="card">
+            <a href="buttons.html">
+            <img src="buttons.PNG" alt="">
+            <h2>Buttons, catch them if you can!</h2></a>
+            <p>If you can click the buttons, you win.</p>
+            <p>Prizes are bragging and self gratification.</p>
+        </div>
+        <div class="card">
+            <a href="stopwatch.html">
+            <img src="stopwatch.PNG" alt="">
+            <h2>A Stopwatch.</h2></a>
+            <p>It does stopwatch things</p>
+        </div>
+        <div class="card">
+            <a href="accordion.html">
+            <img src="accordion.PNG" alt="">
+            <h2>Accordion</h2></a>
+            <p>It's does not play music.</p>
+        </div>
+        <div class="card">
+            <a href="scroll.html">
+            <img src="scrolLine.PNG" alt="">
+            <h2>Scroll line</h2></a>
+            <p>Keep on scrollin playa.</p>
+        </div>
+        <div class="card">
+            <a href="bookmark.html">
+            <img src="floatInput.PNG" alt="">
+            <h2>Bookmarks</h2></a>
+            <p>They're like the bookmarks built into your browser, only they are built into a webpage.</p>
+            <p>And they don't work as well.</p>
+        </div>
+    </div>
+</body>
+</html>
